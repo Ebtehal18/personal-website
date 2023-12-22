@@ -1,0 +1,111 @@
+.header {
+  padding: 1.875rem 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-background);
+  z-index: 2;
+  position: sticky;
+  top: 0;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  border-bottom: 0.1rem solid var(--color-input-border);
+  background-color: var(--color-background);
+  top: 0.1rem;
+  z-index: -1;
+}
+.navigation__list {
+  display: flex;
+  gap: 2rem;
+}
+.navigation {
+  transition: var(--transition-timing);
+  -webkit-transition: var(--transition-timing);
+  -moz-transition: var(--transition-timing);
+  -ms-transition: var(--transition-timing);
+  -o-transition: var(--transition-timing);
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+}
+.navigation__link:hover,
+.navigation__link:active {
+  text-decoration: underline;
+  color: var(--color-text);
+}
+.container:has(#bio:target) .navigation__bio,
+.container:has(#contact:target) .navigation__contact,
+.container:has(#clints:target) .navigation__clints,
+.container:has(#projects:target) .navigation__projects,
+.container:has(#media:target) .navigation__media,
+.container:has(#skills:target) .navigation__skills {
+  color: red;
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+}
+
+/* burger */
+.burger-menu__checkbox {
+  display: none;
+}
+/* end burger */
+
+/* toggle start */
+.toggle {
+  display: flex;
+  gap: 10px;
+  margin-right: auto;
+  align-items: center;
+}
+
+.toggle__checkbox {
+  display: none;
+}
+.toggle__title {
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+}
+.toggle__label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #bc7af9;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  width: 45px;
+  height: 22px;
+  cursor: pointer;
+  padding: 3px 4px;
+  transition: 0.3s;
+}
+.toggle__label::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  background-color: #f8ff95;
+  transition: 0.3s;
+}
+
+.toggle__checkbox:checked + .toggle__label {
+  background-color: #f3f8ff;
+}
+.toggle__checkbox:checked + .toggle__label::after {
+  transform: translateX(30px);
+  background-color: #a6ff96;
+  -webkit-transform: translateX(30px);
+  -moz-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  -o-transform: translateX(30px);
+}

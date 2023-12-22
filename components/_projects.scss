@@ -1,0 +1,31 @@
+.project__main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 74px;
+  row-gap: 75px;
+}
+.projects__img {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  max-width: 100%;
+}
+.projects__data {
+  align-self: center;
+}
+.projects__info {
+  line-height: 1.5;
+}
+.projects__links {
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-dark-blue);
+  margin-top: 23px;
+}
+.projects__links::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url(imgs/external-icon.png);
+  background-size: contain;
+  margin-left: 6px;
+}
